@@ -10,9 +10,9 @@ import TelegramIcon from '@material-ui/icons/Telegram';
 import Icon from '@material-ui/core/Icon';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import ListSubheader from '@material-ui/core/ListSubheader';
-import BarChartIcon from '@material-ui/icons/BarChart';
 import withWidth from '@material-ui/core/withWidth';
 import PropTypes from 'prop-types';
+import WhatsAppIcon from '@material-ui/icons/WhatsApp';
 
 const useStyles = makeStyles((theme) => ({
 	
@@ -20,7 +20,8 @@ const useStyles = makeStyles((theme) => ({
 		
 		paddingTop: '50px',
 		fontSize: '10px',
-		alignText: 'left'
+		alignText: 'left',
+		alignItems: 'center'
 		
 	},
 	
@@ -72,7 +73,7 @@ const Footer = () => {
 		
 		>
 			<ListItem button>
-				<ListItemIcon onClick={() => {window.open('https://t.me/SethNFT');}} >
+				<ListItemIcon onClick={() => {window.open('https://t.me/burgossrodrigo');}}>
 					<TelegramIcon  classes={{root: classes.iconRoot}} />
 				</ListItemIcon>	
 				<ListItemText primary="Telegram" />
@@ -87,12 +88,25 @@ const Footer = () => {
 			
 				
 			<ListItem button>
-				<ListItemIcon onClick={() => {window.open('https://twitter.com/SethNft');}} >
+				<ListItemIcon onClick={() => {window.open('https://twitter.com/rurgos');}}>
 					<TwitterIcon  classes={{root: classes.iconRoot}} />
 				</ListItemIcon>	
 				<ListItemText primary="Twitter" />
 			</ListItem>
-			
+
+			<ListItem button>
+				<ListItemIcon onClick={() => {window.open('https://api.whatsapp.com/send?phone=5571993502380');}}>
+					<WhatsAppIcon  classes={{root: classes.iconRoot}} />
+				</ListItemIcon>	
+				<ListItemText primary="WhatsApp" />
+			</ListItem>
+
+			<ListItem button>
+				<ListItemIcon onClick={() => {window.open('https://github.com/burgossrodrigo')}}>
+					<GitHubIcon />
+				</ListItemIcon>
+				<ListItemText primary="GitHub" />
+			</ListItem>			
 
 		</List>
 
@@ -140,7 +154,7 @@ const Footer = () => {
 			
 			<ListItem button>
 				<ListItemIcon>
-					<BarChartIcon />
+					<GitHubIcon />
 				</ListItemIcon>
 				<ListItemText primary="Chart" />
 			</ListItem>
