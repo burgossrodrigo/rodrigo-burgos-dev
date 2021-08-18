@@ -2,7 +2,8 @@ import React from 'react';
 import { Toolbar, 
 		 Breadcrumbs,
 		 withWidth,
-		 Link
+		 Link,
+		 Typography
 		 } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';		 
 
@@ -12,13 +13,54 @@ const Navigation = (props) => {
 		
 		root: {
 			
-			flexGrow: 1
+		
+			
+		},
+		
+		title: {
+			
+		float: 'left',
+		marginRight: '65%',
+		flexGrow: 1
+		
 			
 		},
 		
 		toolbar: {
 			
-			display: 'flex'
+	[theme.breakpoints.only('xs')]: {
+			
+		display: 'flex',
+		flexDirection: 'row',
+		flexGrow: 1	
+				  
+	  },
+	 [theme.breakpoints.between('sm', 'xl')]: {
+
+		display: 'flex',
+		flexDirection: 'row',
+		fontSize: '20vw',
+				  
+	}
+			
+		},
+		
+		breadcrumbs: {
+			
+	[theme.breakpoints.only('xs')]: {
+			
+		display: 'none'
+	  
+				  
+	  },
+	 [theme.breakpoints.between('sm', 'xl')]: {
+
+		display: 'flex',
+		flexDirection: 'row',
+		float: 'right',
+		fontSize: '30px',
+				  
+	}
 			
 		}
 		
@@ -31,7 +73,8 @@ const Navigation = (props) => {
 	return(
 		<div className={classes.root}>
 			<Toolbar className={classes.toolbar}>
-				<Breadcrumbs classes={classes.breadcrumbs}>
+				<Typography className={classes.title} variant='h4'>Rodrigo Burgos</Typography>
+				<Breadcrumbs className={classes.breadcrumbs}>
 					<Link>
 						About
 					</Link>
