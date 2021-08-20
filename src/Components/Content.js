@@ -69,8 +69,8 @@ const Content = () => {
 
 
 				<Box className={classes.welcome}>
-					<Typography variant='h1' style={{float: 'left'}}>Hi!</Typography><br />
-					<Typography variant='h4' style={{float: 'left'}}>
+					<Typography variant='h4' style={{float: 'left'}}>Hi!</Typography><br />
+					<Typography variant='h6' style={{float: 'left'}}>
 						My name is Rodrigo Burgos, i'm a fullstack developer located on Salvador, Bahia, Brazil who work as a freelancer
 						for many groups all around the globe. I can comunicate perfectly in english and would love to join in projects
 						involving exploratory data analisis and blockchain development.
@@ -81,36 +81,36 @@ const Content = () => {
 
 		<Typography style={{marginTop: '15vh', marginBottom: '15vh', marginLeft: '5vw'}} variant='h4'>Languages and frameworks</Typography>
 		<Grid container spacing={3} style={{width: '80%', marginLeft: '10%'}}>
-			<Grid item xs={12} sm={6} md={6} lg={6} xl={6} style={{marginBottom: '15vh'}}>
+			<Grid item xs={6} sm={6} md={6} lg={6} xl={6} style={{marginBottom: '15vh'}}>
 				<img style={{float: 'right'}} src={'https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/480px-Unofficial_JavaScript_logo_2.svg.png'} width={120} height={120} />
 			</Grid>
-			<Grid item xs={12} sm={6} md={6} lg={6} xl={6} style={{marginBottom: '15vh'}}>
+			<Grid item xs={6} sm={6} md={6} lg={6} xl={6} style={{marginBottom: '15vh'}}>
 				<Typography variant='h6' style={{float: 'left'}}>
 					I'm absolutely familiarized to javascript E6, i can perfome async functions, promisses and callbacks, i work well with objects and arrays. 	
 				</Typography>						
 			</Grid>
-			<Grid item xs={12} sm={6} md={6} lg={6} xl={6} style={{marginBottom: '15vh'}}>
+			<Grid item xs={6} sm={6} md={6} lg={6} xl={6} style={{marginBottom: '15vh'}}>
 				<Typography variant='h6' style={{float: 'left'}}>
 					I'm pretty much updated about solidity versions, can work well with async functions, deal witth array and objects. 	
 				</Typography>						
 			</Grid>			
-			<Grid item xs={12} sm={6} md={6} lg={6} xl={6} style={{marginBottom: '15vh'}}>
+			<Grid item xs={6} sm={6} md={6} lg={6} xl={6} style={{marginBottom: '15vh'}}>
 				<img src={'https://plugins.jetbrains.com/files/9475/125999/icon/pluginIcon.svg'} width={120} height={120} />
 			</Grid>
-			<Grid item xs={12} sm={6} md={6} lg={6} xl={6} style={{marginBottom: '15vh'}}>
+			<Grid item xs={6} sm={6} md={6} lg={6} xl={6} style={{marginBottom: '15vh'}}>
 				<img style={{float: 'right'}} src={'https://reactstrap.github.io/assets/logo.png'} width={120} height={120} />
 			</Grid>
-			<Grid item xs={12} sm={6} md={6} lg={6} xl={6} style={{marginBottom: '15vh'}}>
+			<Grid item xs={6} sm={6} md={6} lg={6} xl={6} style={{marginBottom: '15vh'}}>
 				<Typography variant='h6' style={{float: 'left'}}>
 					I can build application with functional components, very familiarized with hooks and useEffect.
 				</Typography>						
 			</Grid>
-			<Grid item xs={12} sm={6} md={6} lg={6} xl={6} style={{marginBottom: '15vh'}}>
+			<Grid item xs={6} sm={6} md={6} lg={6} xl={6} style={{marginBottom: '15vh'}}>
 				<Typography variant='h6' style={{float: 'left'}}>
 					I also can build application with SSR, comunicated well with API's and work with routing system.
 				</Typography> 							
 			</Grid>
-			<Grid item xs={12} sm={6} md={6} lg={6} xl={6} style={{marginBottom: '15vh'}}>
+			<Grid item xs={6} sm={6} md={6} lg={6} xl={6} style={{marginBottom: '15vh'}}>
 				<img  src={'https://www.creative-tim.com/assets/frameworks/icon-nextjs-552cecd0240ba0ae7b5fbf899c1ee10cd66f8c38ea6fe77233fd37ad1cff0dca.png'} width={120} height={120} />
 			</Grid>
 			
