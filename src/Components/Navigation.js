@@ -3,7 +3,11 @@ import { Toolbar,
 		 Breadcrumbs,
 		 withWidth,
 		 Link,
-		 Typography
+		 Typography,
+		 AppBar,
+		 Box,
+		 TextField,
+		 Button
 		 } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';		 
 
@@ -13,35 +17,35 @@ const Navigation = (props) => {
 		
 		root: {
 			
-		
+		flexGrow: 1,
+
 			
 		},
 		
 		title: {
 			
-		float: 'left',
-		marginRight: '65%',
-		flexGrow: 1
+		flexGrow: 1,
 		
+		},
+		
+		form: {
+			
+			[theme.breakpoints.only('xs')]:{display: 'none'},
+			[theme.breakpoints.between('sm', 'xl')]:{display: 'flex', flexDirection: 'row', margin: theme.spacing(2)}
+			
+		},
+		
+		button: {
+			
+			marginLeft: '1vw',
+			height: '5vw'
 			
 		},
 		
 		toolbar: {
 			
-	[theme.breakpoints.only('xs')]: {
-			
-		display: 'flex',
-		flexDirection: 'row',
-		flexGrow: 1	
-				  
-	  },
-	 [theme.breakpoints.between('sm', 'xl')]: {
-
-		display: 'flex',
-		flexDirection: 'row',
-		fontSize: '20vw',
-				  
-	}
+	[theme.breakpoints.only('xs')]: {marginRight: theme.spacing(2)},
+	 [theme.breakpoints.between('sm', 'xl')]: {}
 			
 		},
 		
@@ -59,6 +63,7 @@ const Navigation = (props) => {
 		flexDirection: 'row',
 		float: 'right',
 		fontSize: '30px',
+		marginLeft: '23vw'
 				  
 	}
 			
@@ -71,19 +76,26 @@ const Navigation = (props) => {
 
 	
 	return(
-		<div className={classes.root}>
-			<Toolbar className={classes.toolbar}>
-				<Typography className={classes.title} variant='h4'>Rodrigo Burgos</Typography>
-				<Breadcrumbs className={classes.breadcrumbs}>
+		<Box className={classes.root}>
+			<Toolbar variant="dense" className={classes.toolbar}>
+				<Typography style={{width: '25vw'}} variant='h4'>Rodrigo Burgos</Typography>
+				<Breadcrumbs separator="   " className={classes.breadcrumbs}>
 					<Link>
 						About
 					</Link>
 					<Link>
 						Work
-					</Link>				
+					</Link>
 				</Breadcrumbs>
+				<form className={classes.form} noValidate autoComplete="off">
+					<TextField id="outlined-basic" label="email here" variant="outlined" />
+					<Button style={{height: '9vh', marginLeft: '1vw'}}variant="contained" color="primary">
+					  Contact
+					</Button>
+				</form>	
+				
 			</Toolbar>	
-		</div>
+		</Box>
 	);
 
 }
