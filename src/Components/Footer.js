@@ -17,14 +17,24 @@ import WhatsAppIcon from '@material-ui/icons/WhatsApp';
 const useStyles = makeStyles((theme) => ({
 	
 	root:{
-		
+		[theme.breakpoints.only('xs')]:{
+		paddingTop: '50px',
+		fontSize: '10px',
+		alignText: 'left',
+		alignItems: 'center',
+		marginLeft: '25%',
+		marginTop: '10vh'
+		},
+		[theme.breakpoints.between('sm', 'xl')]:{
+			
 		paddingTop: '50px',
 		fontSize: '10px',
 		alignText: 'left',
 		alignItems: 'center',
 		marginLeft: '35%',
 		marginTop: '10vh'
-		
+			
+		}
 	},
 	
 
@@ -51,6 +61,7 @@ const useStyles = makeStyles((theme) => ({
 			
   display: 'flex',
   flexDirection: 'row',
+
 			
 		}
 		

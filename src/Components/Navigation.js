@@ -7,9 +7,11 @@ import { Toolbar,
 		 AppBar,
 		 Box,
 		 TextField,
-		 Button
+		 Button,
+		 IconButton
 		 } from '@material-ui/core';
-import { makeStyles } from '@material-ui/core/styles';		 
+import { makeStyles } from '@material-ui/core/styles';
+import MenuIcon from '@material-ui/icons/Menu';		 
 
 const Navigation = (props) => {
 	
@@ -18,6 +20,8 @@ const Navigation = (props) => {
 		root: {
 			
 		flexGrow: 1,
+		backgroundColor: '#cebde2',
+		color: '#ddd9ce'
 
 			
 		},
@@ -26,6 +30,22 @@ const Navigation = (props) => {
 			
 		flexGrow: 1,
 		
+		},
+		
+		menu: {
+			
+			[theme.breakpoints.only('xs')]:{
+				
+				marginLeft: '45vw',
+				position: 'relative'
+				
+			},
+			[theme.breakpoints.between('sm', 'xl')]:{
+				
+				display: 'none'
+				
+			}
+			
 		},
 		
 		form: {
@@ -78,8 +98,8 @@ const Navigation = (props) => {
 	return(
 		<Box className={classes.root}>
 			<Toolbar variant="dense" className={classes.toolbar}>
-				<Typography style={{width: '25vw'}} variant='h4'>Rodrigo Burgos</Typography>
-				<Breadcrumbs separator="   " className={classes.breadcrumbs}>
+				<Typography style={{width: '25vw'}} variant='h4' color="primary">Rodrigo Burgos</Typography>
+				<Breadcrumbs color="secundary" separator="   " className={classes.breadcrumbs}>
 					<Link>
 						About
 					</Link>
@@ -87,13 +107,15 @@ const Navigation = (props) => {
 						Work
 					</Link>
 				</Breadcrumbs>
-				<form className={classes.form} noValidate autoComplete="off">
-					<TextField id="outlined-basic" label="email here" variant="outlined" />
-					<Button style={{height: '9vh', marginLeft: '1vw'}}variant="contained" color="primary">
+				<form className={classes.form} color="secundary" noValidate autoComplete="off">
+					<TextField color="secundary" id="outlined-basic" label="email here" variant="outlined" />
+					<Button style={{height: '9vh', marginLeft: '1vw'}}variant="contained" color="secondary">
 					  Contact
 					</Button>
 				</form>	
-				
+						<IconButton className={classes.menu}>
+							<MenuIcon color='white' fontSize="large" color="secondary" />
+						</IconButton>				
 			</Toolbar>	
 		</Box>
 	);

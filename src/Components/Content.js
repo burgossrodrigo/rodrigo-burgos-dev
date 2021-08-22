@@ -29,7 +29,9 @@ const Content = () => {
 			[theme.breakpoints.only('xs')]:{
 				
 				display: 'flex',
-				flexDirection: 'column'
+				flexDirection: 'column',
+				marginLeft: '25%',
+				marginBottom: '10vh'
 				
 			},
 			
